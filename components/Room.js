@@ -2,6 +2,7 @@ import { View, Text, Button, TextInput } from "react-native";
 import { useState, useContext, useEffect } from "react";
 import { io } from 'socket.io-client';
 import UserContext from "../context/UserContext";
+import { db } from "../config/firebase";
 
 //const socket = io('http://localhost:3000');
 
@@ -13,7 +14,7 @@ const sendMessage = (msg) => {
 export default Room = () => {
 
   const handleLog = () => {
-    console.log(users)
+    console.log(db)
   }
 
   const dummyData = [
